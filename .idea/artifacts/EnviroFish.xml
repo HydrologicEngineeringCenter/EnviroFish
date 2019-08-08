@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="EnviroFish">
+    <output-path>$PROJECT_DIR$/EnviroFish/out</output-path>
+    <root id="archive" name="EnviroFish.jar">
+      <element id="module-output" name="EnviroFish" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/EnviroFish/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
