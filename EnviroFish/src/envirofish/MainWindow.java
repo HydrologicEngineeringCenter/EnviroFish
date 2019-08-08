@@ -1345,7 +1345,7 @@ public class MainWindow extends javax.swing.JFrame {
        //read the stage area curve
        int size = stopYear-startYear+1;
        stageAreaCurve = new PairedDataContainer(); 
-       int rv = pd.read(stageAreaCurve);
+       int rv = pd.read(stageAreaCurve); //Error at this line
        
        if ( rv == -2)
        {

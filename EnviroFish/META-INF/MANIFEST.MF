@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: envirofish.Main
+Class-Path: hec.jar hec-dssvue-v3.0.1.jar heclib.jar lookup.jar rma.jar
+

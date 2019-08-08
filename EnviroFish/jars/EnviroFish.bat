@@ -1,1 +1,1 @@
-java -jar EnviroFish.jar -Djava.library.path="C:\Program Files\Hec\HEC-DSSVue\lib"
+java -jar EnviroFish.jar -Djava.library.path="C:\Users\q0hecngn\IdeaProjects\EnviroFish\EnviroFish\lib"

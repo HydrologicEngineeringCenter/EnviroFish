@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="AbsoluteLayout">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/EnviroFish/jars/AbsoluteLayout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EnviroFish/jars/EnviroFish.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EnviroFish/jars/hec.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EnviroFish/jars/heclib.jar!/" />
+      <root url="file://$PROJECT_DIR$/EnviroFish/jars" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/EnviroFish/jars" recursive="false" />
+  </library>
+</component>
