@@ -1229,65 +1229,13 @@ public class MainWindow extends javax.swing.JFrame {
         java.util.Vector paths = new java.util.Vector();
         
         rv = ts.searchDSSCatalog("",paths);
-        
-        outer: for ( int i = 0; i < paths.size(); ++i )
-        {
-            // get the selected path and added it to the display list
-            String selectedPath = (String) paths.elementAt(i);
-            
-            // break the selected path into segments
-            String[] selectedParts = selectedPath.substring(1).split("/");
-            
-            // make sure the c part is a legal part for stage data
-            boolean legal = false;
-            for( int j = 0; j < stageDataStr.length; ++j)
-            {
-                if(stageDataStr[j].equals(selectedParts[2]))
-                {
-                    legal = true;
-                    break;
-                }
-            }
-            
-            // if the cpart isnt legal go to the next path
-            if ( legal == false)
-            {
-                continue;
-            }           
-            
-           String currentPath; 
-           String[] currentParts; 
-           
-           ++i;
-           do
-           {    
-            //advance to the next path and get it
-            currentPath = (String) paths.elementAt(i);
-            currentParts = currentPath.substring(1).split("/");
-           } while ( selectedParts[0].equals(currentParts[0]) &&
-                     selectedParts[1].equals(currentParts[1]) &&
-                     selectedParts[2].equals(currentParts[2]) &&
-                     selectedParts[4].equals(currentParts[4]) &&
-                     selectedParts[5].equals(currentParts[5]) &&
-                     ++i < paths.size() );
-           
-           --i;
-           currentPath = (String) paths.elementAt(i);
-           currentParts = currentPath.substring(1).split("/");
-           
-           // make the display string that hold D range
-           java.util.Vector path = new java.util.Vector();
-           path.add(selectedParts[0]);
-           path.add(selectedParts[1]);
-           path.add(selectedParts[2]);
-           path.add(selectedParts[3] + " - " + currentParts[3]);
-           path.add(selectedParts[4]);
-           path.add(selectedParts[5]); 
-           
-           stagePathsModel.addRow(path);
-           
+
+        CondensedReference[] cr = ts.getCondensedCatalog("");
+
+        for (int i = 0; i < cr.length; i++) {
+            stagePathsModel.addRow(cr[i].toString().substring(1).split("/"));
         }
-        
+
         jStageTable.clearSelection();
         
         if ( jStageTable.getRowCount() > 0)
